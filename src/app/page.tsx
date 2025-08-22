@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="snap-y snap-mandatory h-screen overflow-y-scroll">
-      <div className="fixed inset-0 -z-10">
+    <main className="md:snap-y md:snap-mandatory md:h-screen min-h-[100svh] overflow-y-scroll">
+      <div className="md:fixed inset-0 -z-10">
         <Image
           src="/images/home.png"
           alt="Water background"
@@ -15,7 +15,7 @@ export default function Home() {
       </div>
       <section
         id="home"
-        className="snap-start flex flex-col items-center justify-center h-screen text-center"
+        className="md:snap-start flex flex-col items-center justify-center h-screen text-center"
       >
         <h1 className="text-white text-8xl font-bebas mb-2">
           INÊS SOARES SILVA
@@ -40,7 +40,7 @@ export default function Home() {
       </section>
       <section
         id="why-me"
-        className="bg-gradient-to-b from-[#FFFBEA] via-white to-[#EAF6FF] snap-start h-screen flex items-center bg-white"
+        className="bg-gradient-to-b from-[#FFFBEA] via-white to-[#EAF6FF] md:snap-start h-screen flex items-center bg-white"
       >
         <div className="mx-auto w-full max-w-6xl px-6">
           <h2 className="text-[#0F6A67] text-4xl md:text-6xl font-bebas text-center mb-8">
@@ -96,7 +96,7 @@ export default function Home() {
       </section>
       <section
         id="portfolio"
-        className="snap-start min-h-screen flex flex-col items-center justify-center bg-[#FAFAF5] px-6 py-16"
+        className="md:snap-start min-h-screen flex flex-col items-center justify-center bg-[#FAFAF5] px-6 py-16"
       >
         <h2 className="text-[#0F6A67] text-4xl md:text-6xl font-bebas text-center mb-4">
           O MEU PORTFÓLIO
@@ -212,7 +212,7 @@ export default function Home() {
       {/* Secção fotografias 1 */}
       <section
         id="portfolio"
-        className="bg-gradient-to-b from-[#EAF4FF] to-white snap-start min-h-screen flex flex-col items-center justify-center bg-[#FAFAF5] px-6 py-16"
+        className="bg-gradient-to-b from-[#EAF4FF] to-white md:snap-start min-h-screen flex flex-col items-center justify-center bg-[#FAFAF5] px-6 py-16"
       >
         <h2 className="text-[#0F6A67] text-4xl md:text-6xl font-bebas text-center mb-4">
           O MEU PORTFÓLIO
@@ -321,7 +321,7 @@ export default function Home() {
       {/* Secção fotografias 2 */}
       <section
         id="portfolio"
-        className=" bg-gradient-to-b from-[#FFFBEA] via-white to-[#EAF6FF] snap-start min-h-screen flex flex-col items-center justify-center bg-[#FAFAF5] px-6 py-16"
+        className=" bg-gradient-to-b from-[#FFFBEA] via-white to-[#EAF6FF] md:snap-start min-h-screen flex flex-col items-center justify-center bg-[#FAFAF5] px-6 py-16"
       >
         <h2 className="text-[#0F6A67] text-4xl md:text-6xl font-bebas text-center mb-4">
           O MEU PORTFÓLIO
@@ -425,7 +425,7 @@ export default function Home() {
       {/* Porque criar conteudo 2 */}
       <section
         id="why-me"
-        className="bg-gradient-to-b from-[#EAF9F7] to-[#CDEDE9] snap-start h-screen flex items-center bg-white"
+        className="bg-gradient-to-b from-[#EAF9F7] to-[#CDEDE9] md:snap-start h-screen flex items-center bg-white"
       >
         <div className="mx-auto w-full max-w-6xl px-6">
           <h2 className="text-[#0F6A67] text-4xl md:text-6xl font-bebas text-center mb-8">
@@ -484,7 +484,7 @@ export default function Home() {
       {/* Pacote */}
       <section
         id="pacote"
-        className="bg-[#F8F7F4] snap-start py-20 flex items-center"
+        className="bg-[#F8F7F4] md:snap-start py-20 flex items-center"
       >
         <div className="mx-auto w-full max-w-4xl px-6">
           {/* Título Principal */}
@@ -571,7 +571,7 @@ export default function Home() {
       </section>
       <section
         id="contacto"
-        className="relative h-screen flex flex-col justify-center items-center text-white snap-start"
+        className="relative h-screen flex flex-col justify-center items-center text-white md:snap-start"
       >
         <div className="text-center space-y-4">
           <h2 className="text-4xl md:text-6xl font-bold">
