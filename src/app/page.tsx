@@ -236,7 +236,7 @@ export default function Home() {
             <div className="relative w-[260px]">
               <div className="relative rounded-[2rem] overflow-hidden shadow-lg w-[260px] aspect-[9/16] bg-black">
                 <Image
-                  src="/images/casaDaMadeira.jpg"
+                  src="/images/casaDaMadeira-fixed.jpg"
                   alt="Breakfast in the nature"
                   fill
                   className="rounded-lg object-cover"
@@ -268,7 +268,7 @@ export default function Home() {
               {/* Wrapper do vídeo: arredondamento ajustado e position relative */}
               <div className="relative rounded-[2rem] overflow-hidden shadow-lg w-[260px] aspect-[9/16] bg-black">
                 <Image
-                  src="/images/parqueDosMonges.jpg"
+                  src="/images/parqueDosMonges-fixed.jpg"
                   alt="Relaxing by the lake"
                   fill
                   className="rounded-lg object-cover"
@@ -495,7 +495,7 @@ export default function Home() {
       {/* Pacote */}
       <section
         id="pacote"
-        className="bg-[#F8F7F4] md:snap-start py-20 flex items-start md:items-center"
+        className="bg-[#F8F7F4] md:snap-start flex items-start md:items-center py-16 md:py-20"
       >
         <div className="mx-auto w-full max-w-4xl px-6">
           {/* Título Principal */}
