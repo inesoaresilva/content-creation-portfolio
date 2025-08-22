@@ -2,45 +2,56 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="md:snap-y md:snap-mandatory md:h-screen min-h-[100svh] overflow-y-scroll">
-      <div className="md:fixed inset-0 -z-10">
-        <Image
-          src="/images/home.png"
-          alt="Water background"
-          fill
-          unoptimized
-          priority
-          className="object-cover"
-        />
-      </div>
+    <main className="min-h-[100svh] md:snap-y md:snap-mandatory overflow-y-auto">
       <section
         id="home"
-        className="md:snap-start flex flex-col items-center justify-center h-screen text-center"
+        className="relative min-h-[100svh] md:h-screen md:snap-start flex flex-col items-center justify-center text-center px-4 py-16 md:py-20"
       >
-        <h1 className="text-white text-8xl font-bebas mb-2">
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/images/home.png"
+            alt="Water background"
+            fill
+            unoptimized
+            priority
+            className="object-cover"
+          />
+        </div>
+        <h1 className="text-white font-bebas leading-none text-5xl md:text-8xl mb-2">
           INÊS SOARES SILVA
         </h1>
-        <p className="text-white font-bebas text-4xl mb-8">O MEU PORTFÓLIO</p>
-        <div className="flex gap-6 flex-wrap justify-center">
+        <p className="text-white font-bebas leading-tight text-2xl md:text-4xl mb-8">
+          O MEU PORTFÓLIO
+        </p>
+
+        {/* Mobile: coluna fluida; Desktop: duas imagens lado a lado 300x400 */}
+        <div className="flex flex-col md:flex-row gap-4 md:gap-6 items-center md:items-stretch">
           <Image
             src="/images/ines1.jpg"
             alt="Inês with flower"
             width={300}
             height={400}
-            className="rounded-lg object-cover"
+            sizes="(max-width: 768px) 85vw, 300px"
+            className="rounded-lg object-cover 
+                   w-[85vw] max-w-[360px] aspect-[3/4]
+                   md:w-[300px] md:h-[400px] md:aspect-auto"
+            priority
           />
           <Image
             src="/images/ines2.jpg"
             alt="Inês in front of blue door"
             width={300}
             height={400}
-            className="rounded-lg object-cover"
+            sizes="(max-width: 768px) 85vw, 300px"
+            className="rounded-lg object-cover 
+                   w-[85vw] max-w-[360px] aspect-[3/4]
+                   md:w-[300px] md:h-[400px] md:aspect-auto"
           />
         </div>
       </section>
       <section
         id="why-me"
-        className="bg-gradient-to-b from-[#FFFBEA] via-white to-[#EAF6FF] md:snap-start h-screen flex items-center bg-white"
+        className="bg-gradient-to-b from-[#FFFBEA] via-white to-[#EAF6FF] min-h-[100svh] md:h-screen flex items-start md:items-center py-16 md:py-20 md:snap-start"
       >
         <div className="mx-auto w-full max-w-6xl px-6">
           <h2 className="text-[#0F6A67] text-4xl md:text-6xl font-bebas text-center mb-8">
@@ -484,7 +495,7 @@ export default function Home() {
       {/* Pacote */}
       <section
         id="pacote"
-        className="bg-[#F8F7F4] md:snap-start py-20 flex items-center"
+        className="bg-[#F8F7F4] md:snap-start py-20 flex items-start md:items-center"
       >
         <div className="mx-auto w-full max-w-4xl px-6">
           {/* Título Principal */}
@@ -496,10 +507,16 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-20">
             {/* Card de Vídeos */}
             <div className="relative">
-              <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#D5E8C1] border border-[#166569] rounded-full px-8 py-2">
-                <h3 className="text-[#2D7A74] text-xl font-bold">VÍDEOS</h3>
+              <div
+                className="absolute -top-10 sm:-top-8 left-1/2 -translate-x-1/2 
+                        bg-[#D5E8C1] border border-[#166569] rounded-full 
+                        px-6 sm:px-8 py-2 pointer-events-none z-10"
+              >
+                <h3 className="text-[#2D7A74] text-lg sm:text-xl font-bold">
+                  VÍDEOS
+                </h3>
               </div>
-              <div className="rounded-3xl bg-[#D5E8C1] p-8 pt-12 h-full flex flex-col justify-center border border-[#166569]">
+              <div className="rounded-3xl bg-[#D5E8C1] p-8 pt-10 sm:pt-8 h-full flex flex-col justify-center border border-[#166569]">
                 <p className="text-center text-[#2D7A74] text-lg">
                   - 1 a 2 vídeos curtos em formato Reels/Tik Tok (storytelling
                   da experiência) -
@@ -509,10 +526,16 @@ export default function Home() {
 
             {/* Card de Fotos */}
             <div className="relative">
-              <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#FDF0C8] rounded-full border border-[#166569] px-8 py-2">
-                <h3 className="text-[#2D7A74] text-xl font-bold">FOTOS</h3>
+              <div
+                className="absolute -top-10 sm:-top-8 left-1/2 -translate-x-1/2 
+                        bg-[#FDF0C8] border border-[#166569] rounded-full 
+                        px-6 sm:px-8 py-2 pointer-events-none z-10"
+              >
+                <h3 className="text-[#2D7A74] text-lg sm:text-xl font-bold">
+                  FOTOS
+                </h3>
               </div>
-              <div className="rounded-3xl bg-[#FDF0C8] border border-[#166569] p-8 pt-12 h-full flex flex-col justify-center">
+              <div className="rounded-3xl bg-[#FDF0C8] border border-[#166569] p-8 pt-10 sm:pt-8 h-full flex flex-col justify-center">
                 <p className="text-center text-[#2D7A74] text-lg">
                   - 5 a 10 fotografias editadas (lifestyle e demonstração do
                   espaço) -
@@ -522,12 +545,17 @@ export default function Home() {
 
             {/* Card de Entrega & Partilha */}
             <div className="relative md:col-span-2">
-              <div className=" border border-[#166569] absolute -top-6 left-1/2 -translate-x-1/2 bg-[#F8F7F4] rounded-full px-8 py-2">
-                <h3 className="text-[#2D7A74] text-xl font-bold">
-                  ENTREGA & PARTILHA
+              <div
+                className="absolute -top-10 sm:-top-8 left-1/2 -translate-x-1/2 
+                        bg-[#F8F7F4] border border-[#166569] rounded-full 
+                        px-6 sm:px-8 py-2 pointer-events-none z-10"
+              >
+                <h3 className="text-[#2D7A74] text-lg sm:text-xl font-bold text-center leading-tight">
+                  ENTREGA &amp;
+                  <br className="sm:hidden" /> PARTILHA
                 </h3>
               </div>
-              <div className="rounded-3xl border border-[#166569] p-8 pt-12">
+              <div className="rounded-3xl border border-[#166569] p-8 pt-10 sm:pt-8">
                 <ul className="space-y-3 text-center text-[#2D7A74] text-lg">
                   <li>
                     - Entrega do conteúdo em alta resolução para o uso da marca
@@ -545,8 +573,8 @@ export default function Home() {
           {/* --- INÍCIO DA SEÇÃO DO BOTÃO ATUALIZADA --- */}
           <div className="text-center mt-20">
             <p className="text-[#8A7EB5] text-xl font-bold mb-8">
-              PRECISAM DE MAIS VÍDEOS? <br /> ENTREM EM CONTACTO PARA SABER OS
-              VALORES MENSAIS
+              PRECISAM DE MAIS VÍDEOS? <br /> ENTREM EM CONTACTO PARA SABER
+              VALORES
             </p>
 
             {/* Container do botão para posicionamento da sombra */}
@@ -558,9 +586,9 @@ export default function Home() {
               <a
                 href="#contacto"
                 className="relative block rounded-full border border-[#8A7EB5] bg-white px-12 py-3
-    font-bold text-[#2D7A74] text-lg tracking-widest
-    transition-transform group-hover:-translate-x-0 group-hover:-translate-y-0 
-    active:translate-x-1 active:translate-y-1 text-center"
+          font-bold text-[#2D7A74] text-lg tracking-widest
+          transition-transform group-hover:-translate-x-0 group-hover:-translate-y-0 
+          active:translate-x-1 active:translate-y-1 text-center"
               >
                 CONTACTAR
               </a>
@@ -569,11 +597,23 @@ export default function Home() {
           {/* --- FIM DA SEÇÃO DO BOTÃO ATUALIZADA --- */}
         </div>
       </section>
+
       <section
         id="contacto"
-        className="relative h-screen flex flex-col justify-center items-center text-white md:snap-start"
+        className="relative min-h-[100svh] md:h-screen flex flex-col justify-center items-center text-white md:snap-start overflow-hidden"
       >
-        <div className="text-center space-y-4">
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/images/home.png"
+            alt="Water background"
+            fill
+            priority
+            unoptimized
+            className="object-cover"
+          />
+        </div>
+
+        <div className="text-center space-y-4 px-4">
           <h2 className="text-4xl md:text-6xl font-bold">
             ENTREM EM CONTACTO!
           </h2>
